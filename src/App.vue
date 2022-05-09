@@ -55,6 +55,8 @@ const deleteTodo = (todo) => {
 
 const deleteSelectedTodos = () => {
   todos.value = todos.value.filter(t => !t.checked)
+
+  window.localStorage.setItem("todoList", JSON.stringify(todos.value))
 }
 
 </script>
